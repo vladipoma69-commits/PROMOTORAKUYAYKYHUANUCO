@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promotora Kuyayky - Catálogo de Servicios</title>
+    <title>Promotora Kuyayky - Catálogo Completo</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #050505; color: white; text-align: center; }
@@ -14,14 +14,14 @@
             min-width: 100%; min-height: 100%;
             z-index: -1;
             object-fit: cover;
-            filter: brightness(0.3);
+            filter: brightness(0.35);
         }
 
         .main-container {
             position: relative;
             z-index: 1;
             padding: 40px 15px;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
         }
 
@@ -30,41 +30,43 @@
             text-shadow: 0 0 15px #00ffcc; 
             font-size: 2.8em;
             text-transform: uppercase;
+            margin-bottom: 5px;
         }
 
-        .slogan { color: #ff0055; font-weight: bold; margin-bottom: 30px; letter-spacing: 2px; }
+        .slogan { color: #ff0055; font-weight: bold; margin-bottom: 30px; letter-spacing: 2px; text-transform: uppercase; }
 
-        /* Cuadrícula de Fotos y Servicios */
+        /* Cuadrícula de Todos los Servicios */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
         .card {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(10, 10, 10, 0.85);
             border: 1px solid #333;
             border-radius: 15px;
-            overflow: hidden; /* Para que la foto no se salga de las esquinas */
+            overflow: hidden;
             transition: 0.3s;
         }
 
         .card:hover {
             border-color: #00ffcc;
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 255, 204, 0.2);
         }
 
         .card img {
             width: 100%;
-            height: 200px;
-            object-fit: cover; /* Ajusta la foto al cuadro */
+            height: 180px;
+            object-fit: cover;
             border-bottom: 2px solid #00ffcc;
+            background-color: #222; /* Fondo por si la imagen demora en cargar */
         }
 
-        .card-info { padding: 20px; }
-        .card h3 { color: #00ffcc; margin-bottom: 10px; font-size: 1.4em; }
-        .card p { color: #ccc; font-size: 0.9em; line-height: 1.5; }
+        .card-info { padding: 15px; }
+        .card h3 { color: #00ffcc; margin-bottom: 8px; font-size: 1.2em; text-transform: uppercase; }
+        .card p { color: #ccc; font-size: 0.85em; line-height: 1.4; }
 
         .btn-whatsapp {
             display: inline-block;
@@ -90,44 +92,86 @@
 
     <div class="main-container">
         <h1>PROMOTORA KUYAYKY</h1>
-        <p class="slogan">CALIDAD Y RESPONSABILIDAD EN CADA EVENTO</p>
+        <p class="slogan">Calidad y Responsabilidad en cada detalle</p>
 
         <div class="services-grid">
+            
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=500" alt="Sonido">
+                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=400" alt="Sonido">
                 <div class="card-info">
                     <h3>🔊 Sonido y Luces</h3>
-                    <p>Equipos profesionales de alta potencia y efectos de iluminación para locales y exteriores.</p>
+                    <p>Alquiler de equipos profesionales y efectos de luces para todo tipo de locales.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80&w=500" alt="Orquesta">
+                <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=400" alt="Orquesta Vivo">
                 <div class="card-info">
-                    <h3>🎸 Orquesta y Música</h3>
-                    <p>Orquesta en vivo, Orquesta Digital y acompañamiento musical para todo compromiso.</p>
+                    <h3>🎸 Orquesta en Vivo</h3>
+                    <p>Música totalmente en vivo con el mejor repertorio para tu fiesta o compromiso.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=500" alt="Eventos">
+                <img src="https://images.unsplash.com/photo-1514525253361-bee8718a74a2?q=80&w=400" alt="Orquesta Digital">
                 <div class="card-info">
-                    <h3>🎉 Animación Total</h3>
-                    <p>Hora Loca, sorpresas de amor, maestro de ceremonia y catering de primera.</p>
+                    <h3>🎹 Orquesta Digital</h3>
+                    <p>La mejor calidad musical digital para eventos modernos y dinámicos.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80&w=500" alt="Coreografías">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=400" alt="Hora Loca">
                 <div class="card-info">
-                    <h3>💃 Coreografías</h3>
-                    <p>Coreógrafos expertos para 15 años y presentaciones de Danzas Folclóricas.</p>
+                    <h3>🎉 Hora Loca</h3>
+                    <p>Diversión garantizada con animadores y personajes para prender la fiesta.</p>
                 </div>
             </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=400" alt="Sorpresas">
+                <div class="card-info">
+                    <h3>💝 Sorpresas de Amor</h3>
+                    <p>Momentos únicos y detalles especiales para esa persona favorita.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1472653431158-6364773b2a56?q=80&w=400" alt="Catering">
+                <div class="card-info">
+                    <h3>🍸 Catering y Coctelería</h3>
+                    <p>Exquisita comida y tragos preparados por expertos para tus invitados.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516051662087-3b1553d8232e?q=80&w=400" alt="Maestro de Ceremonia">
+                <div class="card-info">
+                    <h3>🎤 Maestro de Ceremonia</h3>
+                    <p>Conducción profesional y protocolo para que tu evento sea elegante y ordenado.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=400" alt="Coreografos">
+                <div class="card-info">
+                    <h3>💃 Coreógrafos para 15 Años</h3>
+                    <p>Preparamos el baile de tus sueños con profesionalismo y estilo.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=400" alt="Danzas">
+                <div class="card-info">
+                    <h3>🇵🇪 Danzas Folclóricas</h3>
+                    <p>Espectáculos culturales con lo mejor de nuestro folclore peruano.</p>
+                </div>
+            </div>
+
         </div>
 
         <a href="https://wa.me/51941178129" class="btn-whatsapp" target="_blank">
-            ¡COTIZA AHORA AL 941 178 129!
+            ¡COTIZA AL WHATSAPP 941 178 129!
         </a>
     </div>
 
