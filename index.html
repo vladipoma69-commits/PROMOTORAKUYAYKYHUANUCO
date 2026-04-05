@@ -3,43 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promotora Kuyayky Huánuco</title>
+    <title>Promotora Kuyayky - Huánuco</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #0d0d0d; color: white; text-align: center; padding: 50px; }
-        .container { border: 2px solid #00ffcc; padding: 30px; border-radius: 20px; display: inline-block; box-shadow: 0 0 20px #00ffcc; }
-        h1 { color: #00ffcc; text-shadow: 2px 2px #ff0055; font-size: 2.5em; }
-        p { font-size: 1.2em; color: #cccccc; }
-        .btn-whatsapp {
-            display: inline-block;
-            background-color: #25d366;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; }
+
+        /* Contenedor del Video de Fondo */
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            filter: brightness(0.4); /* Oscurece el video para que resalte el texto */
+        }
+
+        /* Capa de contenido */
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #00ffcc;
+            text-shadow: 0 0 15px #00ffcc, 2px 2px 5px #000;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        /* Secciones de servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 40px;
+        }
+
+        .service-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 204, 0.3);
             transition: 0.3s;
         }
-        .btn-whatsapp:hover { background-color: #128c7e; transform: scale(1.1); }
-        .servicios { margin-top: 40px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .card { background: #1a1a1a; padding: 20px; border-radius: 10px; width: 200px; border: 1px solid #333; }
+
+        .service-item:hover {
+            background: rgba(0, 255, 204, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .service-item span {
+            display: block;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Botón WhatsApp */
+        .btn-ws {
+            background-color: #25d366;
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .btn-ws:hover { background-color: #128c7e; transform: scale(1.05); }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .subtitle { font-size: 1rem; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <video autoplay muted loop playsinline class="video-background">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-concert-crowd-with-bright-lights-and-smoke-2244-large.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
         <h1>PROMOTORA KUYAYKY</h1>
-        <p>Arte, Cultura y Eventos de Calidad</p>
-        
-        <div class="servicios">
-            <div class="card">🎶 Orquestas Digitales</div>
-            <div class="card">💃 Danzas Folclóricas</div>
-            <div class="card">📚 Educación</div>
+        <p class="subtitle">Producción de Eventos de Clase Mundial</p>
+
+        <div class="services-grid">
+            <div class="service-item"><span>🎤 Orquesta en Vivo</span></div>
+            <div class="service-item"><span>🎹 Orquesta Digital</span></div>
+            <div class="service-item"><span>💃 Danzas Folclóricas</span></div>
+            <div class="service-item"><span>🎓 Educación</span></div>
         </div>
 
-        <br>
-        <a href="https://wa.me/51953258129" class="btn-whatsapp" target="_blank">
-            Contactar por WhatsApp
+        <a href="https://wa.me/51953258129" class="btn-ws" target="_blank">
+            RESERVAR AHORA
         </a>
     </div>
 
