@@ -3,123 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promotora Kuyayky - Huánuco</title>
+    <title>Promotora Kuyayky - Servicios Integrales</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html { height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #050505; color: white; text-align: center; }
 
-        /* Contenedor del Video de Fondo */
-        .video-background {
+        /* Video de fondo con capa oscura para lectura */
+        #bg-video {
             position: fixed;
             right: 0;
             bottom: 0;
             min-width: 100%;
             min-height: 100%;
             z-index: -1;
-            filter: brightness(0.4); /* Oscurece el video para que resalte el texto */
+            object-fit: cover;
+            filter: brightness(0.4);
         }
 
-        /* Capa de contenido */
-        .content {
+        .main-container {
             position: relative;
             z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            color: white;
-            text-align: center;
-            padding: 20px;
+            padding: 40px 15px;
+            max-width: 1000px;
+            margin: auto;
         }
 
-        h1 {
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: #00ffcc;
-            text-shadow: 0 0 15px #00ffcc, 2px 2px 5px #000;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
+        .header-box {
             margin-bottom: 30px;
-            font-weight: 300;
         }
 
-        /* Secciones de servicios */
+        h1 { 
+            color: #00ffcc; 
+            text-shadow: 0 0 10px #00ffcc, 2px 2px 5px #000; 
+            font-size: 2.8em;
+            text-transform: uppercase;
+        }
+
+        p.slogan { font-size: 1.2em; color: #ff0055; font-weight: bold; margin-top: 10px; }
+
+        /* Cuadrícula de Servicios */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 15px;
-            width: 100%;
-            max-width: 900px;
-            margin-bottom: 40px;
+            margin-top: 20px;
         }
 
-        .service-item {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
+        .card {
+            background: rgba(20, 20, 20, 0.85);
+            border: 1px solid #00ffcc;
             padding: 20px;
-            border-radius: 10px;
-            border: 1px solid rgba(0, 255, 204, 0.3);
+            border-radius: 15px;
             transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.1);
         }
 
-        .service-item:hover {
-            background: rgba(0, 255, 204, 0.2);
+        .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 0 20px #00ffcc;
+            background: rgba(30, 30, 30, 0.9);
         }
 
-        .service-item span {
-            display: block;
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-        }
+        .card h3 { color: #00ffcc; margin-bottom: 10px; font-size: 1.3em; }
+        .card p { color: #ddd; font-size: 0.95em; line-height: 1.4; }
 
-        /* Botón WhatsApp */
-        .btn-ws {
+        /* Botón de Contacto */
+        .cta-section { margin-top: 50px; }
+        .btn-whatsapp {
+            display: inline-block;
             background-color: #25d366;
             color: white;
-            padding: 18px 35px;
+            padding: 20px 40px;
             text-decoration: none;
-            border-radius: 50px;
             font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            font-size: 1.2em;
+            border-radius: 50px;
+            box-shadow: 0 0 15px #25d366;
             transition: 0.3s;
         }
-
-        .btn-ws:hover { background-color: #128c7e; transform: scale(1.05); }
+        .btn-whatsapp:hover { transform: scale(1.1); background-color: #128c7e; }
 
         @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .subtitle { font-size: 1rem; }
+            h1 { font-size: 2em; }
         }
     </style>
 </head>
 <body>
 
-    <video autoplay muted loop playsinline class="video-background">
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-concert-crowd-with-bright-lights-and-smoke-2244-large.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-party-crowd-at-a-concert-clapping-and-dancing-4050-large.mp4" type="video/mp4">
     </video>
 
-    <div class="content">
-        <h1>PROMOTORA KUYAYKY</h1>
-        <p class="subtitle">Producción de Eventos de Clase Mundial</p>
-
-        <div class="services-grid">
-            <div class="service-item"><span>🎤 Orquesta en Vivo</span></div>
-            <div class="service-item"><span>🎹 Orquesta Digital</span></div>
-            <div class="service-item"><span>💃 Danzas Folclóricas</span></div>
-            <div class="service-item"><span>🎓 Educación</span></div>
+    <div class="main-container">
+        <div class="header-box">
+            <h1>PROMOTORA KUYAYKY</h1>
+            <p class="slogan">CALIDAD Y RESPONSABILIDAD EN CADA EVENTO</p>
         </div>
 
-        <a href="https://wa.me/51953258129" class="btn-ws" target="_blank">
-            RESERVAR AHORA
-        </a>
+        <div class="services-grid">
+            <div class="card">
+                <h3>🔊 Sonido y Luces</h3>
+                <p>Alquiler de equipos profesionales para todo tipo de eventos y locales.</p>
+            </div>
+            <div class="card">
+                <h3>🎸 Orquestas</h3>
+                <p>Música de alto nivel con nuestra Orquesta en Vivo y Orquesta Digital.</p>
+            </div>
+            <div class="card">
+                <h3>🎉 Hora Loca y Sorpresas</h3>
+                <p>La mejor animación, sorpresas de amor y momentos inolvidables.</p>
+            </div>
+            <div class="card">
+                <h3>🎤 Maestría de Ceremonia</h3>
+                <p>Protocolo y conducción profesional para que tu evento sea perfecto.</p>
+            </div>
+            <div class="card">
+                <h3>🍸 Catering y Coctelería</h3>
+                <p>Exquisitos platillos y los mejores tragos para tus invitados.</p>
+            </div>
+            <div class="card">
+                <h3>💃 Coreografías y Danzas</h3>
+                <p>Coreógrafos para 15 años y espectáculos de Danzas Folclóricas.</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <a href="https://wa.me/51953258129" class="btn-whatsapp" target="_blank">
+                ¡COTIZA TU EVENTO POR WHATSAPP!
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
     </div>
 
 </body>
